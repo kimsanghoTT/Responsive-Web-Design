@@ -1,4 +1,10 @@
 @media screen and (max-width: 820px) {
+  .card-section .display-web{
+    display: none;
+  }
+  .card-section .display-pad{
+    display: block;
+  }
   .btn-section{
     z-index: 10;
     position: relative;
@@ -40,6 +46,15 @@
 @media screen and (max-width: 430px) {
   * {
     box-sizing: border-box;
+  }
+    .card-section .display-web{
+    display: none;
+  }
+  .card-section .display-pad{
+    display: none;
+  }
+  .card-section .display-mobile{
+    display: block;
   }
   .inner-box {
     padding: 0 3%;
