@@ -1,22 +1,23 @@
 #wrapper {
   background-color: #02021d;
   position: relative;
+  overflow: hidden;
 }
 .inner-box {
   max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-.overlay-film{
+.overlay-film {
   position: fixed;
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
   opacity: 0;
 }
-.overlay-film.active{
+.overlay-film.active {
   z-index: 120;
   opacity: 1;
 }
@@ -80,6 +81,7 @@ header {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -99,7 +101,7 @@ header {
   font-family: "Pretendard-Regular";
 }
 .header-util {
-  width: 10%;
+  width: 15%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -119,11 +121,10 @@ header {
   font-family: "Pretendard-Regular";
 }
 .header-util button {
-  position: absolute;
-  background: transparent url("../public/img/mobile/ico_search_btn_m.png") no-repeat center;
+  background: transparent url("../public/img/mobile/ico_search_btn_m.png")
+    no-repeat center;
   background-size: 20px 20px;
-  top: 25%;
-  right: 0;
+  margin: 25px auto;
   width: 50px;
   height: 50px;
   display: block;
@@ -131,6 +132,19 @@ header {
   cursor: pointer;
   filter: invert(1);
 }
+  .menu-mobile{
+    display: none;
+    width: 10%;
+  }
+  .menu-btn{
+    display: inline-block;
+    background: url("../public/img/mobile/ico_menu_btn_m.png") no-repeat center;
+    background-size: 20px 20px;
+    width: 40px;
+    height: 40px;
+    filter: invert(0);
+    cursor: pointer;
+  }
 
 /* 검색 박스 */
 .search-bar-box {
@@ -156,7 +170,8 @@ header {
 }
 .search {
   position: absolute;
-  background: transparent url("../public/img/mobile/ico_search_btn_m.png") no-repeat center;
+  background: transparent url("../public/img/mobile/ico_search_btn_m.png")
+    no-repeat center;
   background-size: 20px 20px;
   top: 50%;
   right: 10px;
@@ -166,7 +181,7 @@ header {
   display: block;
   cursor: pointer;
 }
-.close{
+.close {
   background: url("../public/img/mobile/ico_close_btn_m.png") no-repeat center;
   background-size: 20px 20px;
   width: 20px;
@@ -186,10 +201,35 @@ section {
 .section-main-bg {
   width: 100%;
   height: 960px;
-  background: rgba(0,0,0,0.7) url("../public/img/web/main_bg.png") no-repeat center;
-  display: flex;
-  text-align: center;
   margin-bottom: 100px;
+  position: relative;
+}
+.section-main-bg .mySwiper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: transparent;
+}
+.section-main-bg .main-bg01{
+  width: 100%;
+  height: 100%;
+    background: rgba(0, 0, 0, 0.7) url("../public/img/web/main_bg.png") no-repeat
+    center/cover;
+}
+.section-main-bg .main-bg02{
+  width: 100%;
+  height: 100%;
+    background: rgba(0, 0, 0, 0.7) url("../public/img/web/main_bg02.png") no-repeat
+    center/cover;
+}
+.section-main-bg .main-bg03{
+  width: 100%;
+  height: 100%;
+    background: rgba(0, 0, 0, 0.7) url("../public/img/web/main_bg03.png") no-repeat
+    center/cover;
 }
 .main-bg-overlay-text {
   font-family: "NotoSans KR";
@@ -198,6 +238,14 @@ section {
   display: block;
   color: #fff;
   margin: auto;
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
 }
 .main-bg-overlay-text span {
   font-family: "Alfa Slab One";
@@ -241,7 +289,7 @@ section {
   height: 100%;
   transition: transform 0.3s ease;
 }
-.card-img img:hover{
+.card-img img:hover {
   transform: scale(1.1);
 }
 .card-text {
@@ -333,8 +381,8 @@ section {
   right: -18%;
   top: 0;
 }
-.section02-img01 {
-  background: url("../public/img/web/section02_content01.png") no-repeat center;
+.section03-img01 {
+  background: url("../public/img/web/section03_content01.png") no-repeat center/cover;
   width: 600px;
   height: 400px;
   position: absolute;
@@ -344,8 +392,8 @@ section {
   border: 3px solid #fff;
   box-shadow: rgba(0, 0, 0, 0.7) 0px 19px 38px, rgba(0, 0, 0, 0.5) 0px 15px 12px;
 }
-.section02-img02 {
-  background: url("../public/img/web/section02_content02.png") no-repeat center;
+.section03-img02 {
+  background: url("../public/img/web/section03_content02.png") no-repeat center;
   width: 350px;
   height: 450px;
   position: absolute;
@@ -376,9 +424,6 @@ section {
 }
 
 /* 섹션 4 */
-.section04 {
-  margin: 0;
-}
 .news-link-btn {
   text-align: center;
 }
@@ -395,4 +440,24 @@ section {
   color: #fff;
   line-height: 60px;
   transition: color 0.3s ease;
+}
+
+/* 푸터 */
+footer {
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-color: #111111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer span:first-child {
+  font-size: 40px;
+  font-family: "Alfa Slab One";
+  color: #00aeff;
+  -webkit-text-stroke: 1px black;
+  text-decoration: none;
+  font-weight: 800;
 }

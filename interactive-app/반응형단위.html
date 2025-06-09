@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 단위</title>
+    <style>
+      .em {
+        font-size: 20px;
+      }
+      .em p {
+        font-size: 2em; /* 부모 글자 크기 기준 20(부모 글자 크기) x 2 = 40px*/
+        padding: 2em; /* 본인의 글자 크기 기준 */
+      }
+      .rem{
+        font-size: 1rem; /* 1rem = html의 글자 크기 = 16px*/
+      }
+      .rem p {
+        font-size: 2rem; /*2rem = html의 글자 크기 x 2 = 32px*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="em">
+      em 부모 p
+
+      <p>
+        <span>내가 em</span>
+      </p>
+    </div>
+    <div class="rem">
+      rem 부모 p
+
+      <p>
+        <span>내가 rem</span>
+      </p>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    반응형웹 제작시 고려 사항
+    1. 뷰 포트
+    2. 미디어 쿼리
+    breakpoint(중단점)
+
+    반응형웹
+    - 모든 디바이스에 100% 최적화를 위한 웹
+
+    적응형웹
+    - 최적화 시킬 디바이스 결정
+
+    * 단위
+    px : 고정값
+    % : 상대값(부모 기준)
+    em : 상대값 (부모값/자기자신의 글자 크기)
+    rem : 상대값(html=root 기준)
+    vw : 화면 크기 기준 가로
+    vh : 화면 크기 기준 세로
+-->

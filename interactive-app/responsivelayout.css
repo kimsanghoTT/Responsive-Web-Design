@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  text-align: center;
+}
+header {
+  width: 100%;
+  height: 6.25rem;
+  padding: 0 5%;
+  background-color: #cdcdcd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav{
+  width: 50%;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+}
+header ul li{
+  background-color: #222;
+  color: #fff;
+}
+.main-visual {
+  height: 70vh;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #acacac;
+}
+.main-visual .title-box {
+  width: 60vw;
+}
+.main-visual .title-box p:first-of-type {
+  font-size: 2.5rem;
+}
+.main-visual .title-box button {
+  margin-top: 2.5rem;
+  display: inline-block;
+  width: 12.5rem;
+  height: 2.75rem;
+  background-color: #545454;
+}
+.content-box {
+  width: 100%;
+  max-width: 87.5rem;
+  margin: 0 auto;
+}
+section {
+  padding: 2.5rem;
+}
+.section01-content01 {
+  display: flex;
+  width: 100%;
+  gap: 1.875rem;
+}
+.section01-img {
+  flex: 1 1;
+  border: 1px solid #222;
+  height: 23.75rem;
+}
+.section01-text {
+  text-align: start;
+  flex: 1 1;
+  border: 1px solid #222;
+  height: 23.75rem;
+}
+.section01-text button {
+  margin-top: 2.5rem;
+  display: inline-block;
+  width: 12.5rem;
+  height: 2.75rem;
+  background-color: #545454;
+}
+.section01-content02 {
+  height: 12.25rem;
+  background-color: #acacac;
+}
+.content-list {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75rem;
+}
+.content-item {
+  background-color: #222;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+section ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+section ul li figure {
+  border: 1px solid #222;
+  height: 280px;
+  position: relative;
+}
+section ul li {
+  width: 25%;
+}
+section ul li .text-box {
+  border: 1px solid #222;
+  height: 150px;
+}
+.section03 ul li .section03-img::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background-color: #3e3e3e;
+  border-radius: 50%;
+}
+footer {
+  border: 1px solid #222;
+  padding: 1.5rem 0;
+}

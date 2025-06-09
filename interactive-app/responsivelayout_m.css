@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@media screen and (max-width: 570px) {
+  html {
+    font-size: 15px;
+  }
+  .wrapper {
+    padding: 0 2%;
+    box-sizing: border-box;
+  }
+  header {
+    height: 70px;
+    padding: 0 2.5%;
+  }
+  header nav {
+    display: none;
+  }
+  .section01-content01 {
+    display: block;
+  }
+  .section01-img {
+    margin-bottom: 1rem;
+  }
+  .content-item:nth-child(n + 4) {
+    display: none;
+  }
+  section {
+    padding: 2.5rem 0;
+  }
+  section ul {
+    flex-wrap: wrap;
+  }
+  section ul li {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    gap: 20px;
+  }
+  section ul li figure {
+    position: relative;
+    height: 100%;
+    width: 40%;
+  }
+  section ul li .text-box {
+    width: 60%;
+    height: 100%;
+  }
+
+  .section03 ul li {
+    display: block;
+    width: calc(50% - 10px);
+    height: auto;
+  }
+  .section03 ul li figure {
+    width: 100%;
+    height: 200px;
+  }
+  .section03 ul li .text-box {
+    width: 100%;
+    height: 200px;
+  }
+  .section03 ul li .section03-img::before {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width:980px) {
+    header button{
+        flex-shrink: 0;
+    }
+}
