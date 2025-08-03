@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        max-width: 1280px;
+        list-style: none;
+        margin: 50px auto;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+      }
+      figure {
+        margin-bottom: 25px;
+      }
+      img {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 570px) {
+        ul {
+          flex-direction: column;
+          gap: 30px;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+        li {
+          display: flex;
+          gap: 20px;
+        }
+        figure {
+          width: 45%;
+          margin-bottom: 0;
+        }
+        div {
+          width: 55%;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        ul {
+          display: block;
+        }
+        li {
+          display: block;
+          margin-bottom: 35px;
+        }
+        figure,
+        div {
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <figure>
+          <img src="../public/img/web/section03_content01.png" alt="" />
+        </figure>
+        <div>
+          <p>
+            디지털 빛의 흐름이 인간의 형상과 만나 새로운 시각적 내러티브를
+            창조합니다.
+          </p>
+          <p>기술과 예술의 경계에서 펼쳐지는 몰입형 경험을 탐색합니다.</p>
+        </div>
+      </li>
+      <li>
+        <figure>
+          <img
+            src="../public/img/web/section03_content03.png"
+            alt="content02"
+          />
+        </figure>
+        <div>
+          <p>
+            강렬한 네온 빛이 공간을 가득 채우며 보는 이를 미지의 세계로
+            이끕니다.
+          </p>
+          <p>색채와 빛의 조화가 만들어내는 시각적 판타지를 경험해 보세요.</p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
